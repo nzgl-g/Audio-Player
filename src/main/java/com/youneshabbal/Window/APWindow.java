@@ -27,10 +27,9 @@ public class APWindow extends NCPanelAnimation {
             throw new RuntimeException(e);
         }
         
-        ImageIcon saveicon = new ImageIcon("save.png");
-        ImageIcon loadicon = new ImageIcon("sload.png");
-        ImageIcon exiticon = new ImageIcon("exit.png");
-        
+        ImageIcon saveicon = new ImageIcon("src\\main\\java\\Resources\\save.png");
+        ImageIcon loadicon = new ImageIcon("src\\main\\java\\Resources\\load.png");
+        ImageIcon exiticon = new ImageIcon("src\\main\\java\\Resources\\exit.png");
         // Frame
         JFrame frame = new JFrame();
         frame.setTitle("Audio Player");

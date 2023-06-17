@@ -18,7 +18,7 @@ public class APClass extends APWindow implements ActionListener {
     private Clip clip;
     private AudioInputStream audio;
     private int index = 1;
-    private String pathname = "Dont-delete-me!.txt";
+    private String pathname = "src\\main\\java\\Resources\\Dont-delete-me!.txt";
     private Thread thread;
     public APClass() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
         File file1 = new File(pathname);
@@ -211,8 +211,8 @@ public class APClass extends APWindow implements ActionListener {
     }
     public void fileChooser() {
         JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-        Preferences preferences = Preferences.userRoot().node(FileChooserExample.class.getName());
         chooser.setDialogTitle("Select only WAV files! :D");
+        Preferences preferences = Preferences.userRoot().node(FileChooserExample.class.getName());
         String lastPath = preferences.get(LAST_PATH_KEY, null);
         if (lastPath != null) {
             chooser.setCurrentDirectory(new File(lastPath));

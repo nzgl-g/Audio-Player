@@ -5,7 +5,7 @@ A very basic Audio Player application created using Java **Swing**.
 Please ⭐️ this repo and share it with others
 
 ## Requirements 🔧
-* Java JDK 11 or higher.
+* Java 11 or higher.
 
 ## Installation 🔌
 1. Press the **Fork** button (top right the page) to save copy of this project on your account.
