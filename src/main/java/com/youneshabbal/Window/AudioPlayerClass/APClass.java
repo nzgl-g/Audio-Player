@@ -212,6 +212,7 @@ public class APClass extends APWindow implements ActionListener {
     public void fileChooser() {
         JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
         Preferences preferences = Preferences.userRoot().node(FileChooserExample.class.getName());
+        chooser.setDialogTitle("Select only WAV files! :D");
         String lastPath = preferences.get(LAST_PATH_KEY, null);
         if (lastPath != null) {
             chooser.setCurrentDirectory(new File(lastPath));
