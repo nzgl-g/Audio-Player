@@ -33,6 +33,7 @@ public class APWindow extends NCPanelAnimation {
         
         // Frame
         JFrame frame = new JFrame();
+        frame.setTitle("Audio Player");
         frame.setLayout(new BorderLayout());
         frame.setSize(new Dimension(800, 500));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
