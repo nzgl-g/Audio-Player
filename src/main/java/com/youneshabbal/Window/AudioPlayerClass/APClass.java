@@ -18,7 +18,7 @@ public class APClass extends APWindow implements ActionListener {
     private Clip clip;
     private AudioInputStream audio;
     private int index = 1;
-    private String pathname = "AudioPaths.txt";
+    private String pathname = "Don' delete me :(!.txt";
     private Thread thread;
     public APClass() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
         File file1 = new File(pathname);
