@@ -30,9 +30,11 @@ public class APWindow extends NCPanelAnimation {
         ImageIcon saveicon = new ImageIcon("src\\main\\java\\Resources\\save.png");
         ImageIcon loadicon = new ImageIcon("src\\main\\java\\Resources\\load.png");
         ImageIcon exiticon = new ImageIcon("src\\main\\java\\Resources\\exit.png");
+        ImageIcon frameicon = new ImageIcon("src\\main\\java\\Resources\\frameicon.png");
         // Frame
         JFrame frame = new JFrame();
         frame.setTitle("Audio Player");
+        frame.setIconImage(frameicon.getImage());
         frame.setLayout(new BorderLayout());
         frame.setSize(new Dimension(800, 500));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
