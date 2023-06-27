@@ -142,12 +142,18 @@ public class APWindow extends NCPanelAnimation {
         
         // Create buttons with custom styling
         playButton = createStyledButton("           Play             ");
+        playButton.setToolTipText("Play The Audio");
         pauseButton = createStyledButton("          Pause           ");
+        pauseButton.setToolTipText("Pause The Audio");
         restartButton = createStyledButton("         Restart          ");
+        restartButton.setToolTipText("Restart From Begining");
         nextButton = createStyledButton("    Next >  ");
+        nextButton.setToolTipText("Play The Next Audio");
         previousButton = createStyledButton("< Previous");
+        previousButton.setToolTipText("Play The Previous Audio");
 // Progress bar
         clipProgressBar = new JProgressBar();
+        clipProgressBar.setToolTipText("select a place to play audio in it");
         clipProgressBar.setBackground(Color.WHITE); // Set the background color
         clipProgressBar.setForeground(Color.BLUE); // Set the foreground color
         clipProgressBar.setBorder(BorderFactory.createLineBorder(Color.BLACK)); // Set a border
