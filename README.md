@@ -5,7 +5,7 @@ A very basic Audio Player application created using Java **Swing**.
 Please ⭐️ this repo and share it with others
 
 ## RequirAements 🔧
-* Java 11 or higher.
+* JDK 17 or higher.
 * The IDEA i used is IntelliJ Ultimate.
 
 ## Installation 🔌
