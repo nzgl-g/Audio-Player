@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class APWindow extends NCPanelAnimation {
+    private Font font=new Font("Comic Sans MS",Font.BOLD,16);
     public JMenuBar menuBar;
     public JMenu file, edit, help;
     public JPanel mainPanel, nPanel, nnPanel, nsPanel, nePanel, nwPanel, ncPanel, sPanel, ssPanel, snPanel, snePanel, snwPanel, sncPanel;
@@ -12,6 +13,7 @@ public class APWindow extends NCPanelAnimation {
     public JMenuItem save, load, exit;
     public JLabel snwLabel;
     public JLabel sneLabel;
+    public JLabel titleLabel;
     public NCPanelAnimation animation;
     
     public APWindow() {
@@ -90,6 +92,9 @@ public class APWindow extends NCPanelAnimation {
         nsPanel = new JPanel();
         nsPanel.setPreferredSize(new Dimension(0, (int) ((int) (frame.getHeight() * 0.8) * 0.1)));
         nsPanel.setBackground(frame.getBackground());
+        titleLabel=new JLabel();
+        titleLabel.setFont(font);
+        nsPanel.add(titleLabel);
         
         // The south panel
         sPanel = new JPanel(new BorderLayout());
