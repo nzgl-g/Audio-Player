@@ -4,11 +4,14 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.prefs.Preferences;
@@ -18,7 +21,7 @@ public class APClass extends APWindow implements ActionListener {
     private Clip clip;
     private AudioInputStream audio;
     private int index = 1;
-    private String pathname = "src\\main\\java\\Resources\\Dont-delete-me!.txt";
+    private String pathname = "src\\main\\java\\Resources\\Dont-delete-me !.txt";
     private Thread thread;
     public APClass() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
         File file1 = new File(pathname);
@@ -30,6 +33,7 @@ public class APClass extends APWindow implements ActionListener {
         clip = AudioSystem.getClip();
         clip.open(audio);
         clip.start();
+        titleLabel.setText(getFileName(getAudioPath(index)));
         AStart();
         startProgressBar();
         SwingUtilities.invokeLater(() -> {
@@ -130,6 +134,7 @@ public class APClass extends APWindow implements ActionListener {
                     audio = AudioSystem.getAudioInputStream(new File(getAudioPath(index)));
                     clip.open(audio);
                     clip.start();
+                    titleLabel.setText(getFileName(getAudioPath(index)));
                     AStart();
                     startProgressBar();
                     SwingUtilities.invokeLater(() -> {
@@ -154,6 +159,7 @@ public class APClass extends APWindow implements ActionListener {
                     audio = AudioSystem.getAudioInputStream(new File(getAudioPath(index)));
                     clip.open(audio);
                     clip.start();
+                    titleLabel.setText(getFileName(getAudioPath(index)));
                     AStart();
                     startProgressBar();
                     SwingUtilities.invokeLater(() -> {
@@ -177,6 +183,7 @@ public class APClass extends APWindow implements ActionListener {
                 audio = AudioSystem.getAudioInputStream(new File(getAudioPath(index)));
                 clip.open(audio);
                 clip.start();
+                titleLabel.setText(getFileName(getAudioPath(index)));
                 AStart();
                 startProgressBar();
                 SwingUtilities.invokeLater(() -> {
@@ -258,5 +265,14 @@ public class APClass extends APWindow implements ActionListener {
             return time.format(formatter);
         }
         return null;
+    }
+    public static String getFileName(String filePath) {
+        Path path = Paths.get(filePath);
+        String fileNameWithExtension = path.getFileName().toString();
+        int dotIndex = fileNameWithExtension.lastIndexOf(".");
+        if (dotIndex > 0) {
+            return fileNameWithExtension.substring(0, dotIndex);
+        }
+        return fileNameWithExtension;
     }
 }
