@@ -1,5 +1,5 @@
 # Audio Player
-A very basic Audio Player application created using Java **Swing**. 
+A very basic Audio Player application reads only .wav formats created using Java **Swing**. 
 
 ## Thank You!
 Please ⭐️ this repo and share it with others to make more experience.
